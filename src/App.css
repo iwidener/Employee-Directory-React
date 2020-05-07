@@ -15,9 +15,15 @@ div[data-reactroot] {
 .jumbotron {
   background-image: url(assets/backgroundrose.jpg);
   background-size: cover;
-  height: 300px;
+  height: 270px;
+}
+
+h1 {
+  color: grey;
+  text-align: left;
 }
 
 h2 {
-  color: white;
+  text-align: center;
+  padding-bottom: 10px;
 }

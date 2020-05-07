@@ -1,26 +1,26 @@
 import React from "react";
+
 function Table(props) {
     return (
         <table>
             <thead>
                 <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Conatct Phone</th>
+                    <th><strong>#</strong></th>
+                    <th><strong>First Name</strong> {props.firstName} </th>
+                    <th><strong>Last Name</strong> {props.lastName} </th>
+                    <th><strong>Contact Phone</strong>{props.contactPhone} </th>
                 </tr>
             </thead>
             <tbody>
                 {
-                    props.data.map(row => (
+                    // props.data.map(row => (
                         <tr>
-                            <td>{row.rank}</td>
-                            <td>{row.firstName}</td>
-                            <td>{row.lastName}</td>
-                            <td>{row.contactPhone}</td>
+                            <td>{props.rank}</td>
+                            <td>{props.firstName}</td>
+                            <td>{props.lastName}</td>
+                            <td>{props.contactPhone}</td>
                         </tr>
-                    ))
-                    
+                    // ))      
                 }
             </tbody>
         </table>

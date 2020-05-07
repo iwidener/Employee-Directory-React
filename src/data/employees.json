@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "First Name": "Peter",
+        "Last Name": "Smith",
+        "Contact Phone": "214 121 1211"
+    },
+    {
+        "id": 2,
+        "First Name": "Olha",
+        "Last Name": "Shevchenko",
+        "Contact Phone": "214 122 1222"
+    },
+    {
+        "id": 3,
+        "First Name": "Kevin",
+        "Last Name": "Brown",
+        "Contact Phone": "214 133 2373"
+    },
+    {
+        "id": 4,
+        "First Name": "Brad",
+        "Last Name": "Coore",
+        "Contact Phone": "214 244 4741"
+    },
+    {
+        "id": 5,
+        "First Name": "Sofia",
+        "Last Name": "Lysenko",
+        "Contact Phone": "214 525 1595"
+    }
+]
