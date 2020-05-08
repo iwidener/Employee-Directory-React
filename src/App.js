@@ -5,6 +5,7 @@ import React from "react";
 import './App.css';
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "./components/Container";
+import Navbar from "./components/Navbar"
 //import Home from "../src/pages/Home";
 // import Table from "./components/Table/index.js";
 // import EmployeesData from "./data/employees.json";
@@ -61,6 +62,12 @@ const App = () => {
         <h1>Welcome to Home Page</h1>/>
       </Jumbotron>
 
+        <Navbar>
+          <ReactBootstrap.Form inline>
+            <ReactBootstrap.FormControl type="text" placeholder="Search" className="mr-sm-2" />
+          </ReactBootstrap.Form>
+        </ Navbar>
+
       <Container>
         <h2>A Table of Employees</h2>
 
@@ -79,7 +86,8 @@ const App = () => {
         </ReactBootstrap.Table>
 
       </Container>
-    </div >
+      
+    </div>
   )
 }
 

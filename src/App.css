@@ -12,10 +12,11 @@ div[data-reactroot] {
   margin: 0;
 }
 
-.jumbotron {
+div.jumbotron.jumbotron-fluid {
   background-image: url(assets/backgroundrose.jpg);
   background-size: cover;
   height: 270px;
+  margin-bottom: 0;
 }
 
 h1 {
@@ -26,4 +27,12 @@ h1 {
 h2 {
   text-align: center;
   padding-bottom: 10px;
+}
+
+nav.navbar.navbar-expand-lg.navbar-secondary.bg-secondary {
+  margin-bottom: 40px;
+}
+
+div.navbar {
+  padding-left: 380px;
 }
