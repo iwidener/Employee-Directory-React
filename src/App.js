@@ -5,7 +5,8 @@ import React from "react";
 import './App.css';
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "./components/Container";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
+//import SearchBox from "./SearchBox";
 //import Home from "../src/pages/Home";
 // import Table from "./components/Table/index.js";
 // import EmployeesData from "./data/employees.json";
@@ -44,6 +45,7 @@ const App = () => {
       contactPhone: "214 525 1595"
     }
   ]
+
 
   const renderEmployee = (employee, index) => {
     return (
