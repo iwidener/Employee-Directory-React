@@ -1,52 +1,23 @@
-import React from "react";
-// import React, { Component } from "react";
-//import ReactDOM from "react-dom";
-//import { BrowserRouter as Router, Route } from "react-router-dom";
+import React, { useState } from "react";
 import './App.css';
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "./components/Container";
 import Navbar from "./components/Navbar";
-//import SearchBox from "./SearchBox";
-//import Home from "../src/pages/Home";
-// import Table from "./components/Table/index.js";
-// import EmployeesData from "./data/employees.json";
+import employees from "./data/employees.json";
 import * as ReactBootstrap from "react-bootstrap";
 
 const App = () => {
-  const employees = [
-    {
-      id: 1,
-      firstName: "Peter",
-      lastName: "Smith",
-      contactPhone: "214 121 1211"
-    },
-    {
-      id: 2,
-      firstName: "Olha",
-      lastName: "Shevchenko",
-      contactPhone: "214 122 1222"
-    },
-    {
-      id: 3,
-      firstName: "Kevin",
-      lastName: "Brown",
-      contactPhone: "214 133 2373"
-    },
-    {
-      id: 4,
-      firstName: "Brad",
-      lastName: "Coore",
-      contactPhone: "214 244 4741"
-    },
-    {
-      id: 5,
-      firstName: "Sofia",
-      lastName: "Lysenko",
-      contactPhone: "214 525 1595"
-    }
-  ]
+  const [
+    dataEmployee, setDataEmployee 
+  ] = useState(employees)
 
-
+  function handleSearch(e) {
+  const letter = e.target.value
+  const letterSearch = employees.filter( (employee) => employee.firstName.toLowerCase().startsWith(letter.toLowerCase()))
+  console.log(letter); 
+  setDataEmployee(letterSearch);
+  }
+ 
   const renderEmployee = (employee, index) => {
     return (
       <tr key={index}>
@@ -66,7 +37,7 @@ const App = () => {
 
         <Navbar>
           <ReactBootstrap.Form inline>
-            <ReactBootstrap.FormControl type="text" placeholder="Search" className="mr-sm-2" />
+            <ReactBootstrap.FormControl type="text" placeholder="Search" className="mr-sm-2" onChange={handleSearch} />
           </ReactBootstrap.Form>
         </ Navbar>
 
@@ -83,7 +54,7 @@ const App = () => {
             </tr>
           </thead>
           <tbody>
-            {employees.map(renderEmployee)}
+            {dataEmployee.map(renderEmployee)}
           </tbody>
         </ReactBootstrap.Table>
 
