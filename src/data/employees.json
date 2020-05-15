@@ -20,8 +20,8 @@
     {
         "id": 4,
         "firstName": "Brad",
-        "LastName": "Coore",
-        "Contact Phone": "214 244 4741"
+        "lastName": "Coore",
+        "contactPhone": "214 244 4741"
     },
     {
         "id": 5,
